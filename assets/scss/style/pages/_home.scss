@@ -1,0 +1,317 @@
+.slider{
+	background:{
+		image:url('../../assets/images/slider-img.jpg');
+		size:cover;
+	} 	
+	height:100vh;
+	width: 100%;
+	@media screen and (max-width:767px){
+		height:auto;
+		padding: 40px 0;
+	}
+	.container{
+		height:100%;		
+	}
+	.sliderInfo{
+		height:100%;
+		width: 55%;
+		display: table;	
+		@media screen and (max-width:992px){
+			width: 80%;
+		}
+		@media screen and (max-width:767px){
+			width: 100%;
+		}	
+		.sliderinner{
+			display: table-cell;
+			vertical-align: middle;
+			h2{
+				@include text-format(60px,$color-42);
+				font-family: $light;
+				line-height: 70px;
+				@media screen and (max-width:1200px){
+					font-size: 50px;
+					line-height: 60px;
+				}	
+				@media screen and (max-width:767px){
+					font-size: 30px;
+					line-height: 35px;
+				}	
+				span{ 
+					display: block;
+					font-family: $medium;
+					samp{
+						color: $blue-color;
+						font-family: $medium;
+						
+					}
+				}
+			}
+			p{
+				font-size: 19px;
+				margin-bottom: 40px;
+				@media screen and (max-width:767px){
+					font-size: 15px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+} 
+.main-inner{	
+	.aboutUs{
+		background:{
+			color:$white-color;
+			image:url('../../assets/images/aboutBG.jpg');
+			size:cover;
+		} 
+		.aboutleft{
+		}
+		.aboutright{
+			@media screen and (max-width:767px){
+				margin-top: 30px;
+			}
+			ul{
+				margin: 30px 0;
+				@media screen and (max-width:1200px){
+					margin-top: 20px;
+				}
+				li{
+					margin-bottom: 16px;
+					@include text-format(16px,$color-80);
+					font-family: $light;
+					padding-left: 30px;
+					@include pos(r, null);
+					@media screen and (max-width:1200px){
+						font-size: 14px;
+						padding-left: 20px;
+						margin-bottom: 12px;
+					}
+					&:before{
+			        	@include pos(a, 3px auto auto 0px);
+				        content: "\e900"; 
+				        color:$blue-color;  
+				        font-family: 'icomoon' !important;
+				        font-size: 10px;
+				    } 				   
+				}
+			}
+		}
+	}
+	.howItWork{
+		background-color: $color-ee;
+		.howBox{
+			display: flex;
+			margin-top: 70px;
+			@media screen and (max-width:767px){
+				display: block;
+				margin-top: 50px;
+			}
+			.box{
+				text-align: center;
+				padding: 0;
+				background:{
+					image:url('../../assets/images/patientHome.jpg');
+					size:cover;
+					repeat:no-repeat;
+				}
+				&:last-child{
+					margin-bottom: 0;
+				}
+				@media screen and (max-width:767px){
+					margin-bottom: 60px;
+				}
+				.box-inner{
+					background-color: rgba(37,191,255,0.95);
+					height:100%;
+					padding: 0 25px 40px 25px;
+					.iconHow{
+						span{
+							color: rgba(37,191,255,0.95);
+							background-color: $white-color;
+							font-size: 50px;
+							line-height: 105px;
+							display: inline-block;
+							@include square(98px);
+							@include radius(50%);
+							position: relative;
+    						margin-top: -52px;
+    						border:2px solid rgba(37,191,255,0.95);
+    						@include box-shadow-n(5px, -2px, 7px, rgba(0,0,0,0.1));
+    						@media screen and (max-width:992px){
+    							font-size:40px;
+    							@include square(80px);
+    							line-height: 88px;
+    							margin-top: -40px;
+    						}
+						}
+					}
+					h2{
+						@include text-format(24px,$white-color);
+						padding: 15px 0 10px 0;
+					}
+					p{
+						@include text-format(14px,$white-color);
+						font-family: $light;
+					}
+					h4{
+						padding: 10px 0 0 0;
+						margin: 0;
+						a{
+							@include display(middle);
+							@include text-format(16px,$white-color);
+							font-family: $medium;
+							text-decoration: underline;
+						}
+						i{
+							@include display(middle);
+						}
+					}
+					
+				}
+				&.box2{
+					.box-inner{
+						background-color: rgba(19,204,98,0.95);
+						.iconHow{
+							span{
+								color: rgba(19,204,98,0.95);
+								border-color: rgba(19,204,98,0.95); 
+							}
+						}
+					}
+				}
+				&.box3{
+					.box-inner{
+						background-color: rgba(13,91,166,0.95);
+						.iconHow{
+							span{
+								color: rgba(13,91,166,0.95);
+								border-color: rgba(13,91,166,0.95);
+							}
+						}
+					}
+				}				
+			}
+		}
+	}
+	.testimonialSec{
+		background-color: $color-f7;
+		.testimonialBox{
+			margin-top: 70px;
+			padding: 60px 0;
+			@media screen and (max-width:992px){
+				margin-top: 50px;
+				padding: 0px;
+			}
+			text-align: center;
+			.box{
+				display: inline-block;
+				max-width: 630px;
+				width: 100%;
+				background-color: $white-color;
+				padding: 0 50px 40px 50px;
+				@media screen and (max-width:767px){
+					padding: 0 25px 15px 25px;
+				}
+				.userImg{
+					span{
+						background-color: $white-color;
+						display: inline-block;
+						@include square(78px);
+						overflow: hidden;
+						@include radius(50%);
+						position: relative;
+						margin-top: -32px;						
+						img{
+							object-fit:cover;
+							min-height: 100%;
+							min-width:100%;							
+						}
+						@media screen and (max-width:992px){
+							font-size:40px;
+							@include square(80px);
+							line-height: 88px;
+							margin-top: -40px;
+						}
+					}
+				}
+				h2{
+					@include text-format(22px,$blue-color);
+					font-family: $medium;
+					padding: 15px 0 10px 0;
+					@media screen and (max-width:1200px){
+						font-size: 18px;
+					}
+				}
+				p{
+					@include text-format(16px,$color-42);
+					font-family: $light;
+					line-height: 22px;
+					@media screen and (max-width:1200px){
+						font-size: 14px;
+					}
+				}
+										
+			}
+		}
+	}
+	.contactUs{
+		background:{
+			color:$white-color;
+			image:url('../../assets/images/aboutBG.jpg');
+			size:cover;
+		} 
+		.contactForm{
+			.form-group{
+				margin-bottom: 20px;
+				@media screen and (max-width:1200px){
+				 	margin-bottom: 15px;
+				}	
+				textarea{
+					min-height: 85px;
+					@media screen and (max-width:1200px){
+						min-height: 75px;
+					}
+				}			
+			}
+			button[type="submit"]{
+				margin-top:30px;
+				@media screen and (max-width:767px){
+					margin-top:10px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+		.addressSect{
+			border: 1px solid $color-df;
+			padding:10px 45px;
+			@media screen and (max-width:1200px){
+				padding:10px 20px;
+			}
+			li{
+				padding: 32px 0 32px 80px;
+				border-bottom: 1px solid $color-df;
+				@include text-format(16px,$color-80);
+				font-family: $light;
+				@include pos(r, null);
+				@media screen and (max-width:1200px){
+					padding: 24px 0 24px 40px;
+					font-size: 14px;
+				}
+				&:last-child{
+					border: 0 none;
+				}
+				i{
+					color: $blue-color;
+					font-size: 32px;
+					@include pos(a, 35px auto auto 5px);
+					@media screen and (max-width:1200px){
+						padding: 25px 0;
+						font-size: 20px;
+						top: 0;
+					}
+				}
+			}
+		}
+	}
+}

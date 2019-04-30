@@ -1,0 +1,470 @@
+.modal {
+	&.customModal{	
+  		text-align: center;
+  		padding: 0!important;
+		&:before {
+		  content: '';
+		  display: inline-block;
+		  height: 100%;
+		  vertical-align: middle;
+		  margin-right: -4px;
+		}
+		.modal-dialog {
+		  display: inline-block;
+		  text-align: left;
+		  vertical-align: middle;		
+			.modal-content{
+				@include radius(0);
+				.close {
+				    font-family: $regular;
+				    @include text-format(30px,$color-80);
+				    filter: alpha(opacity=80);
+				    opacity: 0.8;
+				    margin: 8px;
+				    cursor: pointer;
+				    @include pos(r, null);
+				    z-index: 1;
+				}
+				/* forgetModal css start */
+				.forgetModal{
+					padding: 80px;
+					@media screen and (max-width:1200px){
+						padding: 50px;
+					}
+					@media screen and (max-width:992px){
+						padding: 30px;
+					}
+					@media screen and (max-width:767px){
+						padding: 20px;
+					}
+					.icon{
+						span{
+							@include text-format(80px,$blue-color);
+							@media screen and (max-width:1200px){
+								font-size: 60px;
+							}
+							@media screen and (max-width:767px){
+								font-size: 45px;
+							}
+						}
+					}
+					h2{
+						@include text-format(30px,$blue-color);
+						@media screen and (max-width:1200px){
+							font-size: 26px;
+						}
+						@media screen and (max-width:767px){
+							font-size: 22px;
+						}
+					}
+					p{
+						margin-bottom: 40px;
+						@media screen and (max-width:767px){
+							margin-bottom: 20px;
+						}
+					}
+				}
+				/* forgetModal css end */
+				/* addQuesModal css start */
+				.addQuesModal{
+					padding: 60px;
+					@media screen and (max-width:1200px){
+						padding: 50px;
+					}
+					@media screen and (max-width:992px){
+						padding: 30px;
+					}
+					@media screen and (max-width:767px){
+						padding: 20px;
+					}
+					h2{
+						@include text-format(30px,$blue-color);
+						@media screen and (max-width:1200px){
+							font-size: 26px;
+						}
+						@media screen and (max-width:767px){
+							font-size: 22px;
+						}
+					}
+					textarea{
+						min-height: 200px;
+						margin: 15px 0;
+					}				
+				}
+				/* addQuesModal css end */
+
+				/* Edit medication css start */
+				.editMedicationModal{
+					padding: 80px;
+					@media screen and (max-width:1200px){
+						padding: 50px;
+					}
+					@media screen and (max-width:992px){
+						padding: 30px;
+					}
+					@media screen and (max-width:767px){
+						padding: 20px;
+					}					
+					h2{
+						@include text-format(30px,$blue-color);
+						@media screen and (max-width:1200px){
+							font-size: 26px;
+						}
+						@media screen and (max-width:767px){
+							font-size: 22px;
+						}
+					}
+					.flex{
+						display: flex;
+					}
+					i{
+						margin-left: 10px;
+						font-size:30px;
+						padding-top: 6px;
+						display: inline-block;
+						@media screen and (max-width:767px){
+							font-size: 20px;
+							padding-top: 8px;
+						}
+					}
+				}
+				/* Edit medication css end */
+
+				/* Edit medication css start */
+				.rejectreasonModal{
+					padding: 60px;
+					@media screen and (max-width:1200px){
+						padding: 40px;
+					}
+					@media screen and (max-width:992px){
+						padding: 30px;
+					}
+					@media screen and (max-width:767px){
+						padding: 20px;
+					}					
+					h2{
+						@include text-format(24px,$blue-color);
+						margin: 0 0 25px 0;
+						@media screen and (max-width:1200px){
+							font-size: 20px;
+						}
+						@media screen and (max-width:767px){
+							font-size: 18px;
+						}
+					}					
+				}
+				/* Edit medication css end */
+
+				/* reject modal css start */
+				.rejectreasonModal{
+					padding: 60px;
+					@media screen and (max-width:1200px){
+						padding: 40px;
+					}
+					@media screen and (max-width:992px){
+						padding: 30px;
+					}
+					@media screen and (max-width:767px){
+						padding: 20px;
+					}					
+					h2{
+						@include text-format(24px,$blue-color);
+						margin: 0 0 25px 0;
+						@media screen and (max-width:1200px){
+							font-size: 20px;
+						}
+						@media screen and (max-width:767px){
+							font-size: 18px;
+						}
+					}					
+				}
+				/* reject modal css end */
+
+
+				/* approvalModal css start */
+				.approvalModal{
+					padding: 60px;
+					@media screen and (max-width:1200px){
+						padding: 50px;
+					}
+					@media screen and (max-width:992px){
+						padding: 30px;
+					}
+					@media screen and (max-width:767px){
+						padding: 20px;
+					}					
+					h2{
+						@include text-format(24px,$blue-color);
+						padding-bottom: 25px;
+						@media screen and (max-width:1200px){
+							font-size: 20px;
+						}
+						@media screen and (max-width:767px){
+							font-size: 18px;
+						}
+					}					
+				}
+				/* approvalModal css end */
+				/* patient request approve Modal css start */
+				.patientrequestapproveModal{
+					padding: 60px;
+					@media screen and (max-width:1200px){
+						padding: 50px;
+					}
+					@media screen and (max-width:992px){
+						padding: 30px;
+					}
+					@media screen and (max-width:767px){
+						padding: 20px;
+					}					
+					h2{
+						@include text-format(30px,$blue-color);
+						@media screen and (max-width:1200px){
+							font-size: 26px;
+						}
+						@media screen and (max-width:767px){
+							font-size: 18px;
+						}
+					}	
+					p{
+						margin-bottom: 35px;
+						@media screen and (max-width:767px){
+							margin-bottom: 15px;
+						}
+					}
+					.btn{
+						margin: 0 10px;
+						@media screen and (max-width:767px){
+							margin: 5px 5px;
+						}
+					}				
+				}
+				/* patient request approve Modal css end */
+				/* patient doctor list Modal css start */
+				.patientdoctlistModal{
+					padding: 60px;
+					@media screen and (max-width:1200px){
+						padding: 50px;
+					}
+					@media screen and (max-width:992px){
+						padding: 30px;
+					}
+					@media screen and (max-width:767px){
+						padding: 20px;
+					}	
+					ul{
+						max-height: 200px;
+						overflow-y: auto;
+						overflow-x: hidden;
+						padding-left: 25px;
+						.form-group{
+							margin-bottom: 15px;
+						}
+					}															
+				}
+				/* patient doctor list  Modal css end */
+
+				/* completeBookingModal css start */
+				.completeBookingModal{
+					padding: 60px 40px;
+					@media screen and (max-width:1200px){
+						padding: 40px 20px;
+					}
+					@media screen and (max-width:992px){
+						padding: 30px 20px;
+					}
+					@media screen and (max-width:767px){
+						padding: 20px;
+					}
+					h2{
+						@include text-format(20px,$color-42);
+						font-family: $medium;
+						margin:0 0 10px 0;
+						@media screen and (max-width:1200px){
+							font-size: 18px;
+						}
+						@media screen and (max-width:767px){
+							font-size: 16px;
+						}
+					}
+					h3{
+						@include text-format(16px,$color-42);
+						margin:0;
+						@media screen and (max-width:1200px){
+							font-size: 14px;						
+						}
+						@media screen and (max-width:767px){
+							font-size: 13px;
+						}
+					}
+					p{
+						margin: 35px 0;
+						@media screen and (max-width:1200px){
+							margin: 20px 0;					
+						}
+						@media screen and (max-width:767px){
+							margin: 10px 0;
+						}
+					}
+					.btn{
+						i{
+							font-size: 24px;
+							margin-right: 8px;
+							display: inline-block;
+							vertical-align: middle;
+						}
+					}
+				}
+				/* completeBookingModal css end */
+				/* trackerModal css start */
+				.trackerModal{
+					padding: 80px;
+					@media screen and (max-width:1200px){
+						padding:60px 50px;
+					}
+					@media screen and (max-width:992px){
+						padding: 30px;
+					}
+					@media screen and (max-width:767px){
+						padding: 20px;
+					}
+					.btn{
+						margin: 0 8px;
+					}
+					p{
+						margin:0 0 35px 0;
+						font-size: 18px;
+						font-family: $regular;
+						@media screen and (max-width:1200px){
+							margin:0 0 20px 0;					
+						}
+						@media screen and (max-width:767px){
+							margin: 10px 0;
+							font-size: 16px;
+						}
+					}					
+				}
+				/* trackerModal css end */
+				/* re schedule css start */
+				.rescheduleModal{
+					padding: 130px 100px;
+					@media screen and (max-width:1200px){
+						padding:60px 50px;
+					}
+					@media screen and (max-width:992px){
+						padding: 50px 30px;
+					}
+					@media screen and (max-width:767px){
+						padding:40px 20px;
+					}
+					.btn{
+						margin: 0 8px;
+						@media screen and (max-width:767px){
+							margin:5px; 
+						}
+					}
+					p{
+						margin:0 0 35px 0;
+						font-size: 18px;
+						font-family: $regular;
+						@media screen and (max-width:1200px){
+							margin:0 0 20px 0;					
+						}
+						@media screen and (max-width:767px){
+							margin: 10px 0;
+							font-size: 16px;
+						}
+					}					
+				}
+				/* re schedule css end */
+				/* monthly subscription css start */
+				.monthlySubscriptionModal{
+					padding: 100px 80px;
+					@media screen and (max-width:1200px){
+						padding:60px 50px;
+					}
+					@media screen and (max-width:992px){
+						padding: 50px 30px;
+					}
+					@media screen and (max-width:767px){
+						padding:40px 20px;
+					}
+					label{
+						margin-bottom: 10px;
+					}
+					.btnsBox{
+						@media screen and (max-width:767px){
+							text-align: center;
+						}
+					}
+					.btn{
+						margin: 20px 8px 0 8px;
+						@media screen and (max-width:767px){
+							margin: 20px 5px 0 5px;; 
+						}
+					}									
+				}
+				/* monthly subscription css end */
+				/* Delete Doctor Modal css start */
+				.deleteDocModal{
+					padding: 80px;
+					@media screen and (max-width:1200px){
+						padding:60px 50px;
+					}
+					@media screen and (max-width:992px){
+						padding: 30px;
+					}
+					@media screen and (max-width:767px){
+						padding: 20px;
+					}
+					.btn{
+						margin: 0 8px;
+					}
+					p{
+						margin:0 0 35px 0;
+						font-size: 18px;
+						font-family: $regular;
+						@media screen and (max-width:1200px){
+							margin:0 0 20px 0;					
+						}
+						@media screen and (max-width:767px){
+							margin: 10px 0;
+							font-size: 16px;
+						}
+					}					
+				}
+				/* Delete Doctor Modal css end */
+
+				/* resume Servicec  Modal css start */
+				.resumeServicecModal{
+					padding: 80px;
+					@media screen and (max-width:1200px){
+						padding:60px 50px;
+					}
+					@media screen and (max-width:992px){
+						padding: 30px;
+					}
+					@media screen and (max-width:767px){
+						padding: 20px;
+					}
+					.btn{
+						margin: 0 8px;
+					}
+					p{
+						margin:0 0 35px 0;
+						font-size: 18px;
+						font-family: $regular;
+						@media screen and (max-width:1200px){
+							margin:0 0 20px 0;					
+						}
+						@media screen and (max-width:767px){
+							margin: 10px 0;
+							font-size: 16px;
+						}
+					}					
+				}
+				/* resume Servicec Modal css end */
+			}
+		}
+	}
+}

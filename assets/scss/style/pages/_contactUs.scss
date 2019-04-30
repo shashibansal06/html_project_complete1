@@ -1,0 +1,112 @@
+.main-inner{	
+	.contactPage{
+		h2{
+			font-family: $medium;
+			@include text-format(28px,$color-42);
+			margin: 0 0 10px 0;
+			@media screen and (max-width:992px){
+				font-size: 24px;
+			}
+			@media screen and (max-width:767px){
+				font-size: 20px;
+			}
+		}
+		.contactOuter{
+			padding: 80px 0;
+			background-color: $white-color;
+			@media screen and (max-width:992px){
+				padding: 60px 0;
+			}
+			@media screen and (max-width:767px){
+				padding: 40px 0;
+			}
+			.boxOuter{
+				margin-top: 50px;
+				display: flex;
+				@media screen and (max-width:767px){
+					display: block;
+					margin-top: 20px;
+				}
+				.box{
+					border-left:1px solid $color-ee;
+					padding-left: 80px;
+					@media screen and (max-width:1200px){
+						padding-left: 50px;
+					}
+					@media screen and (max-width:992px){
+						padding-left: 15px;
+					}
+					@media screen and (max-width:767px){
+						margin-top: 20px;
+						text-align: center;
+					}
+					&:first-child{
+						border: 0 none;
+						padding-left: 15px;
+					}
+				}
+				.socialIcons{
+					li{
+						margin:15px 15px 0 0;
+						a{
+						 	@include text-format(20px,$color-80);
+						}
+					}
+				}
+				p{
+					font-family: $regular;
+				}
+				.info{
+					li{
+						margin-bottom: 10px;
+						@include text-format(16px,$color-80);
+						span{
+							color: $color-42;
+							display: block;
+							a{
+								color: $blue-color;
+							}
+						}
+					}
+				}
+			}
+		}
+		.contactformBox{
+			margin: 80px auto;
+			@media screen and (max-width:992px){
+				margin: 60px auto;
+			}
+			@media screen and (max-width:767px){
+				margin: 40px auto;
+			}
+			.contactFormOuter{
+				padding:0 75px; 
+				@media screen and (max-width:1200px){
+					padding:0px; 
+				}
+				@media screen and (max-width:767px){
+					padding:0px 15px; 
+				}
+				.customForm{
+					padding: 40px 30px;
+					margin-top: 10px;
+					background-color: $white-color;
+					@media screen and (max-width:1200px){
+						padding: 30px 20px;
+					}
+					@media screen and (max-width:767px){
+						padding: 30px 15px;
+					}			
+					button[type="submit"]{
+						margin: 0px;					
+					}
+					.form-group{
+						&:last-child{
+							margin-bottom:0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+.main-inner{
+	&.in-pagecontainer{
+		.privacyPolicyPage{
+			p{
+				margin-bottom: 30px;
+				font-family: $regular;
+				@media screen and (max-width:1400px){
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,84 @@
+@mixin grayscale($value){
+    -moz-filter: grayscale($value); /* Safari 6.0 - 9.0 */
+    -webkit-filter: grayscale($value); /* Safari 6.0 - 9.0 */
+    filter: grayscale($value);
+}
+@mixin text-format($size,$color){
+    font-size:$size;
+    color:$color;
+}
+@mixin display($position){
+    display: inline-block;
+    vertical-align: $position;
+}
+@mixin before-after($position,$height,$width){
+    content:'';
+    position:$position;
+    height:$height;
+    width:$width;
+}
+@mixin height-width($height,$width){
+    height:$height;
+    width:$width;
+}
+
+@mixin text-shadow($value1,$value2,$value3,$color){
+    text-shadow: $value1 $value2 $value3 $color;
+    -moz-text-shadow: $value1 $value2 $value3 $color;
+    -webkit-text-shadow: $value1 $value2 $value3 $color;
+}
+
+@mixin rotateX($value){
+    transform: rotateX($value);
+    -moz-transform: rotateX($value);
+    -webkit-transform: rotateX($value);
+}
+@mixin rotateY($value){
+    transform: rotateY($value);
+    -moz-transform: rotateY($value);
+    -webkit-transform: rotateY($value);
+}
+@mixin rotate($value){
+    transform: rotate($value);
+    -moz-transform: rotate($value);
+    -webkit-transform: rotate($value);
+}
+@mixin gradiant($color1,$color2){
+    background: $color1;
+    background: -moz-linear-gradient(left, $color1 0%, $color2 50%, $color1 100%);
+    background: -webkit-linear-gradient(left, $color1 0%,$color2 50%,$color1 100%); 
+    background: linear-gradient(to right, $color1 0%,$color2 50%,$color1 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color1',GradientType=1 );
+}
+
+@mixin input-placeholder {
+  &:-ms-input-placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+@mixin translate($value1,$value2){
+    transform: translate($value1,$value2);
+    -webkit-transform: translate($value1,$value2);
+    -moz-transform: translate($value1,$value2);
+}
+@mixin translateX($value1){
+    transform: translateX($value1);
+    -webkit-transform: translateX($value1);
+    -moz-transform: translateX($value1);
+}
+@mixin translateY($value1){
+    transform: translateY($value1);
+    -webkit-transform: translateY($value1);
+    -moz-transform: translateY($value1);
+}
+@mixin scale($value1){
+    transform: scale($value1);
+    -webkit-transform: scale($value1);
+    -moz-transform: scale($value1);
+}
+@mixin appear($value){
+-webkit-appearance: $value;
+   -moz-appearance:    $value;
+   appearance:         $value;
+}

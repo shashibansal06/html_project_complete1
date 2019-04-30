@@ -1,0 +1,213 @@
+.main-inner{
+	&.in-pagecontainer{
+		.verticalTab{
+			.nav{
+				border:1px solid $color-f1; 
+				li{
+					border-bottom: 1px solid $color-f1;
+					&:last-child{
+						border: 0 none;
+					}
+					a{
+						@include text-format(16px,$color-80);
+						background-color: white;
+						padding: 15px 25px;
+						@media screen and (max-width:1200px){
+							font-size: 14px;
+							padding: 10px 20px;
+						}
+						&:hover, &.active{
+							color:$blue-color;
+						}
+					}
+				}
+			}
+			.tabVerticalContent{
+				padding: 35px 50px;
+				background-color: white;
+				@media screen and (max-width:1200px){
+					padding: 20px 30px;
+				}
+				@media screen and (max-width:767px){
+					padding: 20px;
+					margin-top: 10px;
+				}
+				h3{
+					@include text-format(20px,$color-42);
+					font-family:$medium;	
+					@media screen and (max-width:992px){
+						font-size: 16px;
+					}
+					@media screen and (max-width:767px){
+						font-size: 14px;
+					}
+				}
+				&.profileTab{
+					h3{
+						margin: 0;					
+					}
+					.uploadPhoto {
+						margin: 50px 0;
+						@media screen and (max-width:1200px){
+							margin: 30px 0;
+						}
+						@media screen and (max-width:767px){
+							margin: 20px 0;
+						}
+					}
+					.profileInf{
+						@include text-format(16px,$color-42);
+						font-family:$medium;
+						margin-bottom: 15px;
+						@media screen and (max-width:767px){
+							font-size: 14px;
+						}
+						.info{
+							font-family: $regular;
+							color: $color-80;
+						}
+					}
+				}
+				&.paitientPresc{
+					h3{
+						margin: 10px 0 15px 0;						
+						span{
+							color: $color-80;
+						}
+					}
+				}
+				&.paitientmedic{
+					h3{
+						margin: 10px 0 15px 0;										
+					}
+					ul{
+						li{
+							@include text-format(16px,$color-42);
+							padding: 15px 0;
+							border-bottom: 1px solid $color-f1;
+							@media screen and (max-width:767px){
+								padding: 10px 0;
+								font-size: 14px;
+							}
+							&:last-child{
+								border: 0 none;
+							}
+						}
+					}
+				}
+				&.changePass{
+					h3{
+						margin: 0 0 10px 0;
+					}
+					p{
+						margin-bottom:25px;
+						color: $color-80; 
+					}
+				}	
+				&.turnaroundPage{
+					h3{
+						margin:0; 
+					}
+					p{
+						margin-top: 25px;
+						font-family:$regular;
+						@media screen and (max-width:992px){
+							margin-top: 15px;
+						}
+					}
+					.form-control{
+						max-width: 100px;
+						display: inline-block;
+						vertical-align: middle;
+					}
+					label{
+						font-size: 15px;
+						margin-left: 10px;
+					}
+				}			
+			}
+			.SubSection{
+				@media screen and (max-width:767px){
+					padding: 15px 0 0px 0;
+				}
+				.SubSectionInner{
+					background-color: white;
+					@include radius(10px);
+					overflow: hidden;
+					.titleBox{
+						background-color: $blue-color;
+						padding: 50px;
+						@media screen and (max-width:1200px){
+							padding: 30px 10px;
+						}
+						h4{
+							@include text-format(22px,white);
+							font-family: $medium;
+							text-transform: uppercase;
+							line-height: 30px;
+							margin-bottom: 25px;
+							@media screen and (max-width:1200px){
+								font-size: 18px;
+								line-height: 24px;
+								margin-bottom: 15px;
+							}
+						}
+						h5{
+							@include text-format(30px,white);
+							font-family: $medium;
+							@media screen and (max-width:1200px){
+								font-size: 26px;								
+							}
+						}
+					}
+					.subDateDetail{
+						padding: 30px 25px;
+						border-bottom: 1px solid $color-f1;
+						@media screen and (max-width:1200px){
+							padding: 20px 15px;
+						}
+						li{
+							@include text-format(16px,$color-42);
+							margin-bottom: 10px;
+							@media screen and (max-width:1200px){
+								font-size: 14px;
+							}
+							span{
+								color: $color-80;
+							}							
+						}
+					}
+					.billDetail{
+						padding: 25px;
+						@media screen and (max-width:1200px){
+							padding:15px;
+						}
+						li{
+							@include text-format(16px,$color-42);
+							margin-bottom: 10px;
+							font-family: $medium;
+							@media screen and (max-width:1200px){
+								font-size: 14px;
+							}
+							span{
+								color: $color-80;
+								font-family: $regular;
+								@include display(middle);
+								width: 49%;
+								text-align:right;
+							}
+							i{
+								font-style: normal;
+								@include display(middle);
+								width: 49%;
+							}
+						}
+					}
+					.btnout{
+						padding: 15px;
+					}
+				}
+			}
+		}
+	}
+}	

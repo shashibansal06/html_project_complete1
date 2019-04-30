@@ -1,0 +1,71 @@
+.main-inner{
+	&.in-pagecontainer{
+		.monthlyPrescription{
+			&.nmsPage{
+				.nmsDetail{
+					h3{
+						font-family: $medium;
+						font-size:18px;
+						margin: 0 0 10px 0; 
+						@media screen and (max-width:992px){
+							font-size: 16px;
+						}
+					}
+					p{
+						font-family: $regular;
+						margin: 0 0 25px 0; 
+						@media screen and (max-width:992px){
+							margin: 0 0 15px 0; 
+						}
+					}
+				}
+				.whiteBox{
+					&.nmsDetail{
+						p{
+							&.last-child{
+								margin-bottom: 0;
+							}
+						}
+					}
+					&.questionSec{
+						h3{
+							font-family: $medium;
+							font-size: 18px;
+							margin-top: 0;
+							@media screen and (max-width:992px){
+								font-size: 16px;
+							}
+							@media screen and (max-width:767px){
+								font-size: 14px;
+							}
+						}
+						.form-group{
+							&:last-child{
+								margin-bottom: 0;
+							}
+						}
+					}
+				}
+				.submitDetail{
+					margin-bottom: 30px;
+					@media screen and (max-width:767px){
+						margin-bottom: 20px;
+					}
+					ul{
+						li{
+							font-family: $medium;
+							font-size: 16px;
+							margin-bottom: 5px;
+							@media screen and (max-width:767px){
+								font-size: 14px;
+							}
+							span{
+								font-family: $regular;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

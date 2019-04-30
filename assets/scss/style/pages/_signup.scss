@@ -1,0 +1,152 @@
+.main-inner{
+	&.in-pagecontainer{
+		.loginLinks{
+			text-align: center;
+			margin-bottom: 50px;
+			@media screen and (max-width:767px){
+				margin-bottom: 20px;
+			}
+			[class*="col-"]{
+				display: inline-block;
+				float: none;
+				@media screen and (max-width:767px){
+					display: block;
+				}
+			}
+			a{
+				@include text-format(18px,$color-99);
+				background-color: $white-color;
+				border: 1px solid $color-ee;
+				display: block;
+				padding: 18px 0;
+				@include radius(5px);
+				cursor: pointer;
+				@media screen and (max-width:1200px){
+					font-size: 16px;
+				}
+				@media screen and (max-width:767px){
+					padding: 14px 0;
+					margin-bottom: 10px;
+				}
+				&:hover, &.active{
+					color: $blue-color;
+					border-color: $blue-color;
+				}
+				i{
+					font-size:30px;
+					@media screen and (max-width:1200px){
+						font-size: 24px;
+					}
+				}
+				span{
+					display: block;
+				}
+			}
+		}
+		.customForm{
+			background-color: $white-color;	
+			padding: 60px 95px;
+			@include pos(r, null);
+			@media screen and (max-width:1200px){
+				padding: 40px 55px;
+			}
+			@media screen and (max-width:767px){
+				padding: 30px 20px;
+			}
+			.absolute{
+				@include pos(a, 25px 25px null null);
+				@media screen and (max-width:479px){
+					position: static;
+					margin-bottom: 10px;
+				}
+				.btn{
+					&.border-btn{
+						&.btn-lg{
+							padding: 8px 20px;
+						}
+					}
+				}
+			}
+			.formTitle{
+				text-align: center;
+				@include pos(r, null);
+				&::before{
+					@include pos(a, 10px 0 auto auto);
+					background-color: #dfdfdf;
+					height:1px;
+					width:100%;
+					content: '';		
+				}
+				h2{
+					@include text-format(19px,$color-80);
+					text-transform: uppercase;
+					padding: 0 20px;
+					@include pos(r, null);
+					margin: 0 0 35px 0;
+					background-color: $white-color;	
+					z-index: 1;
+					display: inline-block;	
+					@media screen and (max-width:767px){
+						font-size: 16px;
+						padding: 0 10px;
+					}			
+				}
+			}
+			button[type="submit"]{
+				margin: 30px 0 20px;
+				@media screen and (max-width:767px){
+					margin: 20px 0 10px;
+				}
+			}
+			.forget-pswd{
+				text-align: right;
+				a{
+					@include text-format(14px,$color-80);					
+				}
+			}			
+			.radio-outer{
+				padding-top: 5px;
+			}	
+			.loginUSer{
+				display: table;
+				width: 100%;
+				margin-bottom: 25px;
+				li{
+					display: table-cell;
+					text-align: center;
+					@media screen and (max-width:479px){
+						display: block;
+					}
+					a{
+						background-color: $color-f7;
+						@include text-format(15px,$color-42);
+						padding: 12px 10px;
+						display:block;
+						&.active, &:hover{
+							background-color: $blue-color;
+							color:white;
+						}
+					}
+				}
+			}
+			p{
+				&.note{
+					@include text-format(15px,$color-80);
+					span{
+						color: $color-42;
+					}
+				}
+				&.bottom-text{
+					@include text-format(16px,$color-42);
+					font-family: $light;
+					@media screen and (max-width:1400px){
+						font-size: 14px;
+					}
+					a{
+						font-family: $medium;
+					}
+				}				
+			}
+		}
+	}
+}

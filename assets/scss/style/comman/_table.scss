@@ -1,0 +1,188 @@
+.table{
+	&.customTable{
+		border:1px solid $color-ee;
+		tr{
+			background-color: $white-color;
+			&:nth-child(2n+1){
+				background-color: $color-fa;
+			}			
+			th,td{				
+				padding: 20px;
+				border-top:0 none;
+				@include text-format(16px,$color-42);
+				border-right:1px solid $color-ee;
+				@media screen and (max-width:1200px){
+					padding: 10px;
+					font-size: 14px;
+				}
+				&:last-child{
+					border:0 none;
+				}
+			}
+			td{
+				color: $color-80;
+				&.grrenBtnDownload{
+					width:240px;
+					a{
+						margin-left: 30px;
+					}
+				}
+				&.noData{
+					background-color: white;
+					padding: 110px 20px;
+					text-align: center;
+					font-size: 24px;
+					@media screen and (max-width:992px){
+						padding: 40px 20px;					
+						font-size: 16px;
+					}
+					a{
+						color: $color-80;
+						&:hover{
+							color: $blue-color;
+						}
+					}
+					span{
+						display: block;
+						margin-bottom: 10px;
+						i{
+							font-size: 100px;
+							@media screen and (max-width:992px){
+								font-size: 40px;
+							}
+						}
+					}
+				}
+				.status-btn{
+					font-size: 13px;
+					padding: 2px 5px;
+					min-width: 85px;
+					display: inline-block;
+					@include radius(3px);
+					text-align: center;
+					cursor: pointer;
+					text-transform: capitalize;
+					&.blue{
+						background-color: $blue-color;
+						color: $white-color;
+					}
+					&.green{
+						background-color: $green;
+						color: $white-color;
+					}
+					&.red{
+						background-color: $red;
+						color: $white-color;
+					}
+					&.orange{
+						background-color: $orange;
+						color: $white-color;
+					}
+				}
+				.actionBox{
+					min-width: 240px;
+					li{
+						display: inline-block;
+						padding: 0 20px;
+						@include pos(r, null); 
+						&:before{
+							content: '';
+							@include pos(a, 0 auto auto 0); 
+							@include height-width(24px,1px);
+							background-color: $color-80;
+						}
+						&:first-child{
+							padding-left: 0;
+							&:before{
+								content: none;
+							}
+						}
+						a{
+							
+
+						}
+					}
+				}
+				&.editCancelBtn{
+					a{
+						margin: 0 8px;
+						@include display(middle);
+						i{
+							font-size: 28px; 
+							&.squareEditIcon{
+							  	@include square(28px);							  	
+							  	border:1px solid $blue-color;
+							  	font-size: 16px;
+							 	display: inline-block;
+							  	text-align: center;
+							  	line-height: 28px;							 
+							}
+						}						
+					}
+				}
+			}
+			th{
+				@include pos(rel, null); 
+				font-family: $medium;
+				font-weight: 400;
+				white-space: nowrap;
+				@media screen and (max-width:1200px){
+					padding: 10px 18px 10px 10px;					
+				}
+				.tableArw{
+					@include pos(a, 14px 8px auto auto); 
+					@include height-width(22px,12px);
+					@media screen and (max-width:1200px){
+						top:2px;
+					}
+					@media screen and (max-width:767px){
+						right:4px;
+					}
+					.arw{
+						display: block;
+						@include text-format(16px,$color-80);
+						&.up{
+							@include rotate(180deg);
+							@include pos(r, 6px auto auto 4px);
+						}	
+					} 
+				}
+			}				
+		}
+		&.prescriptionTrackertable{
+			td{
+				&:nth-child(2){
+					min-width:600px;
+					.progressbox{
+						@include display(middle);
+						margin-right: 20px;
+					}
+				}
+				&:nth-child(3){
+					a{
+						margin: 0 20px;
+						@include display(middle);    
+					}
+					i{
+						&.icon{
+							@include text-format(28px,$color-bb);
+						}
+					}
+				}
+				&.progressOuter{
+					span{
+						display: inline-block;
+						vertical-align: top;
+						i{							
+							&.text-muted{
+								display: block;
+								font-style: normal;
+								font-size: 13px;
+							}
+						}
+					}
+				}				
+			}
+		}
+	}
+}

@@ -1,0 +1,180 @@
+.main-inner{
+	&.in-pagecontainer{
+		.pharmacyCreateFrom{
+			.whiteBox{
+				padding: 50px;
+				@media screen and (max-width:992px){
+					padding: 25px;
+				}
+				.rowOuter{					
+					.steps{ 
+						span{
+							@include display(middle);					
+							@include pos(r, null);
+							height: 100%;
+							@media screen and (max-width:767px){	
+							 	margin-bottom: 10px;
+							}
+							samp{
+								@include square(18px);
+								background-color: $color-cc;
+								@include radius(50%);
+								display: inline-block;
+								@include pos(r, null);
+								z-index: 1;
+							}						
+							&:before{
+							    @include pos(a, 18px auto auto 8px);
+							    content: "";   
+							    @include height-width(100%,3px);	
+							    background-color: $color-cc;	
+							    @media screen and (max-width:767px){				    
+							    	content:none;
+							    	top:5px;
+							    }
+						    } 						    
+						} 
+						h3{
+							@include text-format(15px,$color-80);
+						    font-family: $regular;
+						    @include display(top);
+						    margin:3px 0 0 20px;
+						    @media screen and (max-width:767px){	
+						    	margin:3px 0 0 15px;
+						    }
+					    }
+					    &.complete{
+					    	span{
+					    		height: calc(100% - 24px);
+								samp{
+									background-color:$blue-color;
+									@include square(20px);							
+									@media screen and (max-width:767px){	
+										@include square(12px);					
+									}		
+								}
+								&:before{
+								    top:26px;
+								}
+								&:after{
+								    @include pos(a, -7px auto auto -7px);
+								    content: "";   
+								    @include height-width(34px,34px);	
+								    border:3px solid $blue-color;
+								    @include radius(50%);	
+								    background-color: white;						   
+								    @media screen and (max-width:767px){	
+										@include height-width(20px,20px);
+										border-width: 1px;	
+										top:-1px;
+										left:-4px;				
+									}
+							    } 
+							} 
+							h3{
+								@include text-format(15px,$color-80);
+							    margin:0 0 0 20px;
+							    color: $blue-color;
+							     @media screen and (max-width:767px){
+							     	margin-left: 10px;
+							     }
+						    }
+					    }
+					}
+					.rightSide{
+						padding-bottom: 35px;
+						@media screen and (max-width:992px){	
+				        	padding-bottom: 20px;
+				        }
+						h4{
+							@include text-format(18px,$color-42);
+					        font-family: $medium;
+					        text-transform: uppercase;
+					        margin: 0 0 15px 0;
+					        @media screen and (max-width:992px){	
+					        	font-size: 14px;
+					        	margin-bottom: 10px;
+					        }
+
+						}
+						h5{
+							@include text-format(16px,$color-42);
+					        font-family: $medium;
+					        margin: 30px 0 10px 0;	
+					        @media screen and (max-width:992px){	
+					        }				       
+						}
+						p{
+							font-family: $regular;
+							padding-top: 10px;
+							@media screen and (max-width:992px){	
+								padding-top: 0px;
+					        }
+							span{
+								color: $color-80;
+							}
+						}
+						&.step3{
+							.btn{
+								&.border-btn{
+									margin: 10px 15px 10px 0;									
+								}
+								&.deleteBtn{
+									@include text-format(23px,$red); 
+									min-width: 10px;
+									background-color: transparent;
+									@media screen and (max-width:992px){	
+										font-size: 15px;
+									}
+								}
+							}						
+						}
+						&.step4{
+							p{
+								margin: 0;
+								padding: 0;
+								color: $color-80;
+							}
+							.border-right{
+								border-right:1px solid #ccc;
+								@media screen and (max-width:992px){	
+					        		border-bottom:1px solid #ccc;
+					        		border-right: 0 none;
+					        		margin-bottom:15px;
+					        	}	
+							}
+							.radio-outer{ 
+								margin-top: 20px;
+								.z_radio{
+									margin-right: 0;
+									width: 160px;										
+								}
+								.customCheck{		
+									margin-bottom: 15px;						
+									.labelTitle{
+										@include text-format(15px,$color-42);
+										font-family: $regular;
+										font-weight: 400; 
+										@include display(middle);
+										margin-left: 5px;
+									}
+									.min-width60{
+										max-width: 60px;										
+										@include display(middle);
+										margin-bottom:0; 
+									}
+								}	
+								.calInut{
+									.form-group{
+										width: 170px;
+										@include display(middle);
+									}
+								}						
+							}
+						}
+					}
+				}
+			}		
+		}	
+	}
+}

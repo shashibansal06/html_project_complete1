@@ -1,0 +1,19 @@
+.breadcrumb{
+  &.customBreadcrumb{
+    padding: 0;
+    margin-bottom: 40px;
+    background-color: $transparent-color;
+    @media screen and (max-width:992px){
+      margin-bottom: 20px;
+    }
+    li{
+      font-size: 16px;
+      @media screen and (max-width:767px){
+        font-size: 13px;
+      }
+      &::before , &.active{
+        color: $color-42;
+      }
+    }
+  }
+}

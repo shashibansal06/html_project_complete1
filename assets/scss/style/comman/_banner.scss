@@ -1,0 +1,89 @@
+/* inner page banner start */
+.bannerOuter{
+	margin-top: 100px;
+	text-align: center;
+	padding: 75px 0;
+	background:{
+		color:$white-color;
+		image:url('../../assets/images/innerBannerBG.jpg');
+		size:cover;
+	} 
+	@media screen and (max-width:1200px){
+			margin-top: 75px;
+	}
+	@media screen and (max-width:992px){ 
+		margin-top: 65px;
+		padding: 40px 0;
+	}	
+	@media screen and (max-width:767px){
+		margin-top: 0px;
+	}	
+	.icon{
+		display: block;
+		img{
+			display: inline-block;
+			@media screen and (max-width:992px){ 
+				max-width: 60px;
+			}
+		}
+	}
+	h2{
+		@include text-format(34px,$color-42);
+		font-family: $regular;
+		text-transform: uppercase;
+		@media screen and (max-width:1200px){
+			font-size: 28px;
+		}
+		@media screen and (max-width:767px){
+			font-size: 20px;
+		}
+		span{
+			color: $blue-color;
+			font-family: $medium;
+		}
+	}
+	p{
+		font-size: 19px;
+		@media screen and (max-width:1200px){
+			font-size: 16px;
+		}
+		@media screen and (max-width:767px){
+			font-size: 14px;
+		}
+	}
+	.bannerTabs{
+		ul{
+			display: inline-block;
+			border:2px solid $blue-color;
+			@include radius(8px);
+			margin-top: 15px;
+			@media screen and (max-width:767px){
+				display: block;
+				margin-top: 10px;
+			}	
+			li{
+				display: inline-block;		
+				@media screen and (max-width:767px){
+					display: block;
+				}		
+				a{
+					display: inline-block;
+					padding: 15px 5px;
+					min-width: 275px;
+					font-size: 18px;
+					@media screen and (max-width:767px){
+						min-width:10px;
+						display: block;
+						font-size: 14px;
+						padding: 6px 10px;
+					}
+					&:hover , &.active{
+						background-color: $blue-color;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}
+/* inner page banner end */

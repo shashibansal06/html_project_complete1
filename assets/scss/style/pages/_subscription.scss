@@ -1,0 +1,138 @@
+.main-inner{
+	&.in-pagecontainer{
+		.pharmacySubSection{
+			display: flex;
+			width: 100%;
+			@include radius(10px); 
+			overflow: hidden;
+			margin-bottom: 30px;
+			@media screen and (max-width:767px){
+				display: block;
+			}
+			.titleBox{
+				background-color: $blue-color;
+				padding:80px 25px 25px 25px;
+				width:26%;
+				@media screen and (max-width:1200px){
+					padding: 60px 10px 10px;
+				}
+				@media screen and (max-width:767px){
+					width:100%;
+					padding: 10px;
+				}
+				h4{
+					@include text-format(26px,white);
+					font-family: $medium;
+					text-transform: uppercase;
+					line-height: 30px;
+					margin-bottom: 25px;
+					@media screen and (max-width:1200px){
+						font-size: 18px;
+						line-height: 24px;
+						margin-bottom: 15px;
+					}
+					span{
+						font-size: 20px;
+						text-transform: none;
+						display: block;
+						@media screen and (max-width:1200px){
+							font-size: 14px;
+						}
+					}
+				}
+				h5{
+					@include text-format(40px,white);
+					font-family: $medium;
+					@media screen and (max-width:1200px){
+						font-size: 26px;								
+					}
+				}
+				&.green{
+					background-color: $green;
+				}
+				&.golden{
+					background-color: $golden;
+				}
+			}
+		}
+		.list{
+			padding:25px;
+			background-color: white;
+			width:48%;
+			@media screen and (max-width:1200px){
+				padding: 15px;
+			}
+			@media screen and (max-width:767px){
+				width:100%;
+			}
+			h4{
+				@include text-format(16px,$color-42);
+				font-family: $medium;
+			}
+			ul{
+				li{
+					@include text-format(14px,$color-80);
+					margin-top: 15px;
+					@include pos(r, null);
+					padding-left: 25px;
+					&:before{
+						 @include pos(a, 0 auto auto 0);
+						content: "\e936";
+						font-family: 'icomoon' !important;
+					}
+				}
+			}
+
+			
+		}
+		.PharmacyBill{
+			background-color: $color-f2;
+			padding:25px;
+			width:26%;
+			@media screen and (max-width:1200px){
+				padding: 15px;
+			}
+			@media screen and (max-width:767px){
+				width:100%;
+			}
+			.billDetail{
+				li{
+					@include text-format(16px,$color-80);
+					font-family: $medium;
+					text-align: right;
+					margin-bottom: 15px;
+					@media screen and (max-width:1200px){
+						font-size: 14px;
+					}
+					@media screen and (max-width:992px){
+						text-align: left;
+					}
+					span{
+						@include display(middle);
+						width: 49%;
+						@media screen and (max-width:992px){
+							width: 100%;
+						}
+					}
+					i{
+						font-style: normal;
+						@include display(middle);
+						width: 49%;
+						@media screen and (max-width:992px){
+							width: 100%;
+						}
+					}
+					&:last-child{
+						margin: 40px 0;
+						@media screen and (max-width:1200px){
+							margin: 20px 0;
+						}
+					}
+				}
+			}
+			.btn{
+				min-width: 10px;
+			}			
+		}		
+	}
+}	

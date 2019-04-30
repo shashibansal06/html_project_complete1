@@ -1,0 +1,244 @@
+/* tabs css start */
+.mainTabs{
+	background-color: $white-color;
+	.list-inline{
+		li{
+			padding: 0 15px;
+			float: left;
+			@media screen and (max-width:1200px){
+				padding:0 10px;
+			}
+			&:first-child{
+				padding-left:0px; 
+			}
+			a{
+				@include text-format(16px,$color-42);
+				padding: 25px 0;
+				display: block;
+				@include pos(r, null);
+				overflow: hidden;
+				@media screen and (max-width:1200px){
+					font-size: 13px;
+					padding: 15px 0;
+				}
+			    &:before{
+			        @include pos(a, auto auto 0 0);
+			        @include translateX(-100%);
+			        content: "";   
+			        background-color: $blue-color;
+			        @include height-width(3px,100%);
+			        -webkit-transition: all linear 0.3s;
+				    transition: all linear 0.3s;
+				    -moz-transition: all linear 0.3s;
+			    } 
+				&:hover, &.active{
+					color: $blue-color;
+					&:before{
+				      @include translateX(0%);
+				    }
+				}
+			}
+		}
+	}
+}
+/* tabs css end */
+
+/* green box css start */
+.greenbox{
+	margin-top: 30px;
+	@include fluid-ratio(4 2.7, img);
+	overflow: hidden;
+	background-size: cover;
+	@media screen and (max-width:767px){
+		@include fluid-ratio(4 1.5, img);
+		margin-top: 10px;
+	}
+	@media screen and (max-width:479px){
+		@include fluid-ratio(4 2.5, img);
+	}
+	.boxInner{					
+		background: #16ca62;
+		background: -moz-linear-gradient(left, #16ca62 0%, #039bd4 100%); 
+		background: -webkit-linear-gradient(left, #16ca62 0%,#039bd4 100%);
+		background: linear-gradient(to right, #16ca62 0%,#039bd4 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#16ca62', endColorstr='#039bd4',GradientType=1 ); 			
+		@include square(100%);
+		opacity: 0.89;	
+		@include pos(a, 0px auto auto 0px );
+		&:hover{
+			.borderOuter{
+				border-color:$white-color;
+			}
+		}
+		.borderOuter{
+			display: table;
+			@include square(calc(100% - 20px));
+		    border: 1px solid $transparent-color;
+		    margin: 10px;
+			.borderin{
+				display: table-cell;
+				vertical-align: middle;	
+				span{
+					i{
+						@include text-format(40px,$white-color);
+						opacity: 1;
+						@media screen and (max-width:992px){
+							font-size: 28px;
+						}
+					}
+				}
+				h3{
+					@include text-format(19px,$white-color);	
+					line-height: 24px;
+					text-transform: uppercase;
+					opacity: 1;
+					@media screen and (max-width:992px){
+						font-size: 16px;
+					}
+				}	
+			}
+		}					
+	}
+	&.pharmacyService{
+		.boxInner{					
+		@include square(100%);
+		opacity: 0.89;
+		&:hover{
+			.borderOuter{
+				.sideIcons{
+					@include scale(1);
+				}
+			}
+		}
+		.borderOuter{
+		    border: 0 none;
+		    .sideIcons{
+		    	@include pos(a, 0px 10px auto auto);
+		    	@include scale(0);
+		    	transition: all 0.5s ease;
+		    	-moz-transition: all 0.5s ease;
+		    	li{
+		    		@include radius(100%);
+		    		@include square(35px);
+		    		margin-top: 15px;
+					border:2px solid white;
+					@media screen and (max-width:992px){
+						@include square(30px);
+						margin-bottom: 10px;
+					}
+					a{
+						@include text-format(18px,$white-color);
+						line-height: 30px;	
+						display: block;	
+						@media screen and (max-width:992px){
+							font-size: 16px;
+							line-height: 25px;
+						}			
+					}
+		    	}
+		    }			
+		}					
+	}
+	}
+}
+/* green box css end */
+
+
+/* three box style start */
+.detailBox{
+  	margin: 10px 0 30px 0;
+  	@media screen and (max-width:992px){
+   		margin: 10px 0 20px 0;
+  	}
+  	.detailBoxIn{
+	    padding:20px 30px;
+	    background-color: White;
+	    border: 1px solid white;
+	    @media screen and (max-width:992px){
+	      padding:15px 20px;
+	    }
+	    &:hover{
+	      border-color:$blue-color; 
+	    }
+	    .close{
+	      color: $color-80;
+	      opacity: 1;
+	    }
+	    .dayBox{
+	    	@include text-format(16px,$color-42);
+	    	background-color: $input-color;
+	    	border: 1px solid $color-cc;
+	    	padding: 12px 20px;
+	    	 @media screen and (max-width:992px){
+	    	 	font-size: 14px;
+	    	 	padding:8px 10px; 
+	    	 }
+	    }
+    h3{
+	    @include text-format(18px,$color-42);
+	    font-family: $medium;
+	    margin: 0 0 15px 0;
+    } 
+    .mediDetail{
+	    padding-bottom: 15px;
+	    li{
+	        @include text-format(16px,$color-42);
+	        margin-bottom: 10px;
+	        @media screen and (max-width:992px){
+	          font-size: 14px;
+	          margin-bottom: 5px;
+	        }
+	        span{
+	          color:$color-80;
+	        }
+	    }
+    }
+    .panel-group{ 
+      	.panel{
+	        border:0 none;
+	        margin-top: 20px;
+	        &.panel-default {
+	         	.panel-heading{          
+		          	background-color: transparent;
+		           	padding: 0;
+		           	margin-bottom: 20px;
+			        a{
+			            display: block;
+			            padding: 10px;
+			            @include pos(r, null);
+			            @include text-format(16px,white);
+			            background-color: $blue-color;
+			            border-bottom:1px solid $color-ee; 
+			            &:before{
+			               @include pos(a, calc(50% - 8px) 10px auto auto);
+			               content:'\e92d';
+			               font-family: 'icomoon' !important;
+			               font-size: 14px;
+			            }
+			            &.collapsed{              
+			              	background-color: transparent;
+			              	color: $color-42; 
+				            &:before{
+				                top:10px;
+				                content:'\e92e';              
+				             }
+			            }
+			            &:hover{
+			              	text-decoration: none;
+			            }
+			        }
+	        	}
+       		}
+	        .panel-body{
+	          	padding: 0;
+	          	border: 0 none;
+	          	.form-group {
+	              	margin-bottom:5px;              
+	          	}
+	        }
+      	}
+    }
+  }
+}
+/* three box style end */
+

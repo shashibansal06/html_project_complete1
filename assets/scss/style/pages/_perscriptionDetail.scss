@@ -1,0 +1,85 @@
+	.main-inner{
+	&.in-pagecontainer{
+		.monthlyPrescription{		
+			&.prescritDetailPage{
+				.nmsDetail{
+					h3{
+						font-family: $medium;
+						font-size:22px;
+						margin: 0 0 10px 0; 
+						@media screen and (max-width:992px){
+							font-size: 16px;
+						}
+					}
+					h4{
+						@include text-format(20px,$color-42);
+						font-family: $regular;
+						margin: 0 0 25px 0; 
+						@media screen and (max-width:992px){
+							margin: 0 0 15px 0; 
+							font-size:16px;
+						}
+					}
+				}
+				.prescriptionDetail{
+					&.whiteBox{
+						padding: 30px 35px;
+						@media screen and (max-width:992px){
+							padding: 10px 25px;
+						}
+						h2{
+							@include text-format(22px,$color-42);
+							font-family: $medium;
+							@media screen and (max-width:992px){
+								font-size:16px;
+							} 							
+						}
+						ul{
+							padding-bottom: 0;
+						   li{
+						        @include text-format(15px,$color-42);
+						        font-family: $medium;
+						        margin-bottom: 10px;
+						        @media screen and (max-width:992px){
+						          font-size: 14px;
+						          margin-bottom: 5px;
+						        }
+						        span{
+						          font-family: $regular; 
+						        }
+						    }
+						    &.list-inline{
+						    	li{
+						    		margin-bottom: 0px;
+						    		padding: 0 15px;
+						    		@include pos(r, null);
+						    		line-height: 16px;
+						    		&:before{
+								      @include pos(a, 0 auto auto 0);
+								      content: "";   
+								      background-color: $color-42;
+								      @include height-width(100%,1px);
+								      @media screen and (max-width:479px){
+								        content:none;
+								      }
+								    } 
+								    &:first-child{
+								    	padding-left: 0;
+								    	&:before{
+								    		content:none;
+								    	}
+								    }
+								    @media screen and (max-width:479px){
+								    	width: 100%;
+								    	padding: 0;
+								    	margin-bottom: 10px;
+								    }
+						    	}
+						    }
+						}
+					}
+				}
+			}				
+		}		
+	}
+}

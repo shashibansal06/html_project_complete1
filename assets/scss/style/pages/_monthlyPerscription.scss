@@ -1,0 +1,112 @@
+.main-inner{
+	&.in-pagecontainer{
+		.monthlyPrescription{
+			h2{
+				@include text-format(22px,$color-42);
+				font-family:$medium;
+				margin: 20px 0 15px 0;
+				text-transform: uppercase;
+				&.margin-t-0{
+					margin-top: 0;
+				}
+				@media screen and (max-width:1200px){
+					font-size: 18px;
+				}
+				@media screen and (max-width:767px){
+					font-size: 16px;
+				}
+				span{
+					color: $color-80;
+				}
+			}
+			.slectList{
+				margin-top: 40px;
+				display: inline-block;
+				@media screen and (max-width:767px){
+					margin: 0 0 15px 0;
+				}
+			}	
+			.note{
+				margin-bottom: 0;
+				color:$color-80;
+				span{
+					color:$color-42;
+				}
+			}
+		}		
+		.prescriptionDetail{
+			h2{
+				font-family: $regular; 
+				text-transform: capitalize;
+			}
+			ul{
+				padding-bottom: 15px;
+			    li{
+			        @include text-format(16px,$color-42);
+			        margin-bottom: 10px;
+			        @media screen and (max-width:992px){
+			          font-size: 14px;
+			          margin-bottom: 5px;
+			        }
+			        span{
+			          color:$color-80;
+			        }
+			        a{
+			        	span{
+			        		color: $blue-color;
+			        	}
+			        }
+			    }
+			}
+		}
+		.prevContent{
+			margin-bottom: 20px;
+			max-height: 400px;
+			overflow-y:auto; 
+			@media screen and (max-width:992px){
+				margin-bottom: 10px;
+			}
+			.whiteBox{
+				padding: 25px 20px;
+				p{
+					color: $color-80;
+					margin-bottom: 0;
+				}
+			}
+			h4{
+				@include text-format(20px,$color-42);
+				@media screen and (max-width:992px){
+					font-size: 16px;
+				}
+				span{
+					color: $color-80;
+				}
+			}
+		}
+	}
+}
+
+.moreMarginField{
+	.form-group{
+		margin-bottom: 30px;
+		@media screen and (max-width:992px){
+			margin-bottom: 15px;
+		}
+		label{
+			margin-bottom: 10px;
+			@media screen and (max-width:992px){
+				margin-bottom: 5px;
+			}
+		}
+		.radio-outer{
+			label{
+				margin-bottom: 0;
+			}
+		}
+		&.radio-outer{
+			label{
+				margin-bottom: 0;
+			}
+		}
+	}	
+}

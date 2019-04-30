@@ -1,0 +1,52 @@
+.main-inner{
+	&.in-pagecontainer{
+    .faqPage {
+    	h3{
+    		@include text-format(16px,$color-42);
+	        margin:0 0 15px 0;
+	    }
+	    p{
+	        color: $color-80;
+	    }
+	    .panel-group {
+		    .panel {
+		        @include radius(0);
+		        border: 0 none;
+		        &.panel-default{
+		        	.panel-heading{
+		        		background-color: transparent;
+        				padding: 0;
+        				.panel-title {        
+					        a{	
+						    	background-color: $color-f7;
+						        padding: 25px;
+						        display: block;
+						        @include text-format(16px,#3d3d3d);
+						        @include pos(r, null);
+						        border-bottom:1px solid #e6e6e6; 
+						        &:before{
+							    	font-family: 'icomoon' !important;
+							    	content: "\e90d";
+							    	@include pos(a, 24px 20px auto auto);
+							    }
+							    &.in{
+							    	&:before{
+							    		content: "\e90b";
+								    }
+								}
+						    }
+					    }
+		        	}
+		        }		        
+		        .panel-body{
+			        @include text-format(15px,#6a6a6a);
+			        line-height: 28px;
+			        padding: 25px;
+			        border: 0 none;
+			        background-color: $color-fb;
+			    }
+		    }
+		}	    
+    }
+	}
+}

@@ -1,0 +1,92 @@
+.main-inner{
+	&.in-pagecontainer{
+		.searchSection{
+			h4{
+				@include text-format(18px,$color-42);
+				font-family:$regular;
+				margin: 0 0 10px 0;  
+				@include pos(r, null);
+				padding-bottom: 18px;
+				@media screen and (max-width:992px){
+					font-size:15px;  
+					margin: 0 0 10px 0;
+					padding-bottom: 30px;
+				}
+				@media screen and (max-width:767px){
+					margin: 15px 0 5px 0;
+					font-size:16px;
+					font-family: $medium;
+					padding-bottom: 0px;
+				}
+				span{
+					&.pharmcyNote{
+						@include text-format(12px,$red);
+						display: block;						
+						@include pos(a, null null 0 0);
+						@media screen and (max-width:767px){
+							position: static;
+						}
+					}
+				}		
+			}
+			.form-group{
+				margin-bottom: 15px;
+			}
+			.searchSelect{
+				h5{
+					@include text-format(16px,$color-80);
+					font-family:$regular;
+					margin: 0 0 20px 0;
+					@media screen and (max-width:992px){
+						font-size:14px;
+						margin: 0 0 10px 0;
+					}			
+				}
+				p{
+					@include text-format(16px,$color-42);
+					font-family:$regular;
+					@media screen and (max-width:992px){
+						font-size:14px;
+					}
+					@media screen and (max-width:767px){
+						margin: 5px 0 15px 0;
+					}
+				}
+			}
+			&.searchDetail{
+				.whiteBox{
+					display:flex;
+					@media screen and (max-width:767px){
+						display: block;
+					}
+					h4{
+						margin-bottom: 10px;
+						padding-bottom: 0;
+					}
+					.searchSelect{
+						h5{							
+						}
+						p{
+							color: $color-80;
+						}
+					}
+					.col-sm-4{
+						border-left: 1px solid $color-ee;
+						padding-left: 40px;
+						@media screen and (max-width:767px){
+							padding-left: 15px;
+							border: 0 none;
+						}
+						&:first-child, &.first{
+							border:0 none;
+							padding-left: 15px;
+						}
+					}
+					&.noflex{
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}

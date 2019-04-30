@@ -1,0 +1,698 @@
+/* ---------------------------------------------------------------------------------------------------- */
+/* Reset */
+ul,li{
+  list-style: none;
+  margin:0;
+  padding:0;  
+}
+a{
+  color: $blue-color;
+  -webkit-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+}
+a:focus{
+  outline: 0 none;
+  text-decoration: none; 
+}
+a:hover{
+  text-decoration: none;
+}
+body{
+  font-family: $family !important; 
+  background-color: $color-f9;
+}
+.padding-tb{
+  padding:60px 0 70px 0;
+  @media screen and (max-width:992px){
+    padding: 40px 0;
+  }
+}
+input[type="email"] {
+    text-transform: lowercase;
+}
+::-webkit-input[type="email"]-placeholder {
+  text-transform: capitalize;
+}
+input[type="email"]::-moz-placeholder {
+ text-transform: capitalize;
+}
+:-ms-input[type="email"]-placeholder {
+  text-transform: capitalize;
+}
+input[type="email"]::placeholder {
+  text-transform: capitalize;
+}
+.titleSection{
+  h3{
+    @include text-format(40px,$color-42);   
+    font-family: $light;
+    padding:0 0 40px 0;
+    margin:0 0 20px 0;
+    @include pos(r, null);
+    &:before{
+      @include pos(a, auto auto 0px calc(50% - 20px));
+      font-family: 'icomoon' !important;
+      content: "\e913";   
+      color: #d7d7d7;
+      font-size: 40px;
+      @media screen and (max-width:1200px){
+        font-size: 30px;
+      }
+    } 
+    @media screen and (max-width:1200px){
+      font-size: 25px;
+      padding:0 0 30px 0;
+    } 
+    @media screen and (max-width:767px){
+      padding:0 0 20px 0;
+    } 
+    span{
+      color:$blue-color;
+      font-family:$medium;
+    }   
+  }
+  p{
+    margin-bottom: 60px;
+    @media screen and (max-width:767px){
+      margin-bottom: 30px;
+    }
+  }
+}
+p{
+    @include text-format(16px,$color-42);
+    font-family: $light;
+    line-height: 23px;
+    @media screen and (max-width:1400px){
+      font-size: 14px;
+    }
+}
+textarea{
+  min-height: 85px;
+}
+.form-control:focus{
+   border-color: $blue-color !important;
+    @include box-shadow-none();
+}
+
+.whiteBox {
+  padding: 50px 30px;
+  background-color: white;
+  margin-bottom: 25px;
+  @media screen and (max-width:992px){
+    padding: 20px 10px;
+  }
+}
+h2{
+  &.topTitle{
+    @include text-format(22px,$color-42);
+    font-family:$medium;
+    margin: 20px 0 15px 0;
+    text-transform: uppercase;
+    @media screen and (max-width:1200px){
+      font-size: 18px;
+    }
+    @media screen and (max-width:767px){
+      font-size: 16px;
+    }
+  }
+}
+.radio-outer{
+    label{
+        &.z_radio{
+            @include pos(r, null);
+            @include text-format(15px,$color-42);
+            font-weight: 400;
+            margin-right: 20px;
+            margin-bottom: 0;
+            @media screen and (max-width:1400px){
+              font-size: 14px;
+            }
+             @media screen and (max-width:565px){
+              display: block;
+               margin-bottom: 10px;
+            }
+            span{
+                @include padding-left(30);
+                @include pos(r, null);
+                &:after {
+                  @include pos(a, 2px auto auto 4px);
+                  content:none;
+                  @include square(12px);
+                  background-color:$blue-color;  
+                  @include radius(50%); 
+                   @media screen and (max-width:1400px){
+                    @include square(10px);
+                    left:3px;
+                   }                            
+                }
+                &:before {
+                  @include pos(a, -2px auto auto 0px );
+                  border:1px solid $color-cc; 
+                  content: "";      
+                  @include square(20px);
+                  @include radius(50%);  
+                   @media screen and (max-width:1400px){
+                    @include square(16px);
+                    top:-1px;
+                   }       
+                }
+                i{
+                  margin-left:5px;
+                  font-size: 16px;
+                  vertical-align: text-bottom;
+                }
+                .form-group{
+                  display: inline-block;
+                  margin-left: 10px;
+                   @media screen and (max-width:479px){
+                    display: block;
+                    margin-left: 0;
+                    margin-top: 5px;
+                   }
+                }
+            }
+            input[type="radio"]{
+                @include pos(a, 0px auto auto 0px );
+                visibility: hidden;
+                &:checked{
+                    &+ span{
+                        &:after{
+                            content:'';
+                        }
+                        &:before {
+                          border-color:$blue-color; 
+                        }
+                    }
+                }
+            }
+        }
+        &.z_checked{
+            @include pos(r, null);
+            @include text-format(14px,$color-80);
+            font-weight: 400;
+           span{
+                @include padding-left(30);
+                @include pos(r, null);
+                cursor: pointer; 
+                display: inline-block;
+                &:after {
+                  @include pos(a, 0px auto auto 5px );
+                  content:'';
+                  @include text-format(14px,$blue-color);
+                  font-family: 'icomoon' !important;
+                  @media screen and (max-width:1400px){
+                    font-size:12px; 
+                    top: -1px;
+                    left: 3px;
+                  }           
+                }
+                &:before {
+                  @include pos(a, -2px auto auto 0px);
+                  border:1px solid $color-cc; 
+                  content: "";      
+                  @include square(22px);  
+                  @media screen and (max-width:1400px){
+                    @include square(18px); 
+                    
+                    }              
+                }
+            }
+            input[type="checkbox"]{
+                @include pos(a, 0px auto auto 0px );
+                visibility: hidden;
+                &:checked{
+                    &+ span{
+                        &:after{
+                            content:"\e936";
+                        }      
+                        &:before{
+                            background-color:$transparent-color; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}  
+.form-group{
+  @include pos(r, null);
+  &.last{
+    margin-bottom: 0;
+  }
+  label{
+    font-weight: 400;
+  }  
+  input,select,textarea{  
+    &.form-control{
+      @include appear(none);
+      @include text-format(15px,$color-42);
+      @include radius(0px);
+      @include box-shadow-none(none);
+      padding: 12px 20px;
+      height: auto !important;
+      background-color: $input-color;
+      @media screen and (max-width:1200px){
+        font-size: 14px;
+        padding: 8px 25px 8px 10px;
+      }    
+    }  
+  }
+  .btn{
+    min-width: 180px;
+    cursor: pointer;
+    @media screen and (max-width:1200px){
+      min-width: 120px;
+    }
+    &.editButton{
+      @include pos(a, 5px -45px auto auto);
+      height: 34px;
+      width: 34px;
+      min-width: 34px;
+      text-align: center;
+      color: $blue-color;
+      background-color: #fdfdfe;
+      border:1px solid #ccc;
+      @include radius(0px);
+      font-size: 16px;
+      padding: 0;
+      line-height: 36px;
+       @media screen and (max-width:767px){
+         @include pos(r, 0px 0px auto auto);
+         float: right;
+         margin-bottom: 10px;
+       }
+    }
+  }
+  .select-outer{
+    @include pos(r, null);
+    &:after {
+      @include pos(a, calc(50% - 8px) 15px auto auto);
+      content: "\e900";
+      font-family: 'icomoon' !important;
+      font-size: 12px;
+      @include rotate(90deg);
+      color: $color-80;
+      @media screen and (max-width:1200px){
+        top: calc(50% - 6px);
+        right: 10px;
+        font-size: 10px;
+      }               
+    }
+    select{
+      @include appear(none);
+      @include pos(r, null);
+      cursor: pointer;
+      background-color: transparent;
+      z-index:9;
+    }
+  }
+  .cal-outer{
+    @include pos(r, null);
+    &:after {
+      @include pos(a, calc(50% - 15px) 15px auto auto);
+      content: "\e91b";
+      font-family: 'icomoon' !important;
+      font-size: 20px;
+      color: $color-80;               
+    }
+    select{
+      @include appear(none);
+      @include pos(r, null);
+      cursor: pointer;
+      background-color: transparent;
+      z-index:9;
+    }
+  }
+  .time-outer{
+    @include pos(r, null);
+    &:after {
+      @include pos(a, calc(50% - 15px) 15px auto auto);
+      content: "\e93e";
+      font-family: 'icomoon' !important;
+      font-size: 20px;
+      color: $color-80;               
+    }
+    select{
+      @include appear(none);
+      @include pos(r, null);
+      cursor: pointer;
+      background-color: transparent;
+      z-index:9;
+    }
+  }
+  .edit-outer{
+    @include pos(r, null);
+    &:after {
+      @include pos(a, calc(50% - 12px) 10px auto auto);
+      content: "\e924";
+      font-family: 'icomoon' !important;
+      font-size: 18px;
+      color: $color-80;               
+    }
+    select{
+      @include appear(none);
+      @include pos(r, null);
+      cursor: pointer;
+      background-color: transparent;
+      z-index:9;
+    }
+  }
+  .searchbtn{
+    @include pos(r, null);
+    &:after {
+      @include pos(a, calc(50% - 14px) 15px auto auto);
+      content: "\e91a";
+      font-family: 'icomoon' !important;
+      font-size: 20px;
+      color: $color-80;  
+      @media screen and (max-width:1200px){
+        top: calc(50% - 10px);
+        right: 6px;
+        font-size: 14px;
+      }             
+    }
+    select{
+      @include appear(none);
+      @include pos(r, null);
+      cursor: pointer;
+      background-color: transparent;
+      z-index:9;
+    }
+  }
+}
+.filterDrop{
+  label{
+    width: calc(100% - 30px);
+    @include text-format(15px,$color-42);
+    @include pos(a, 12px auto auto 25px);
+    i{
+      font-size: 10px;
+      margin-right:5px;
+    }
+    @media screen and (max-width:1200px){
+      top:10px;
+    }
+    &:after {
+      @include pos(a, calc(50% - 14px) 15px auto auto);
+      content: "\e902";
+      font-family: 'icomoon' !important;
+      font-size: 20px;
+      color: $color-80;               
+    }    
+  }
+  select{
+    &.form-control{
+      padding-left: 90px;
+      padding-right:25px;
+      @include pos(r, null);
+      cursor: pointer;
+      background-color: transparent;
+      z-index:9;
+    }
+  }
+}
+.arrow{
+  &:before{
+      @include pos(a, calc(50% - 8px) 10px auto auto);
+      content: "\e900";
+      font-family: 'icomoon' !important;            
+    }
+  }          
+.uploadPhoto{
+  margin-bottom: 30px;
+  .memberImage{
+    @include square(123px);
+    @include radius(50%);
+    overflow: hidden;
+    @include display(middle);
+    @media screen and (max-width:1200px){
+      @include square(100px);
+    }
+    @media screen and (max-width:767px){
+      @include square(80px);
+    }
+    img{
+      object-fit:cover;
+      min-height: 100%;
+      min-width: 100%;
+    }
+  }
+  .uploadBtn{
+    @include pos(r, null);
+    margin-top: 15px;    
+    input[type="file"]{
+      max-width: 110px;
+      z-index: 1;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+    span{
+      @include text-format(16px,$color-42);
+      @include pos(r, null);
+      @media screen and (max-width:767px){
+        font-size: 14px;
+      }
+    }
+  }
+}
+.uploadfilebtn{  
+  padding: 65px;
+  border:1px solid $color-cc;  
+  @include text-format(18px,$color-cc);
+  @include pos(r, null);
+   @media screen and (max-width:992px){
+    padding: 40px;
+    font-size: 14px;
+   }
+  input{
+    @include pos(a, 0 auto auto 0);
+    @include height-width(100%,100%);
+    @include opacity(0);
+    cursor: pointer;
+  }
+  i{
+    padding-bottom: 15px;
+    display: block;
+    font-size: 66px;
+    @media screen and (max-width:992px){
+      font-size: 40px;
+     }
+    &::before{
+      color: $color-cc;  
+    }
+  }
+  &:hover{    
+      color: $blue-color;
+      i{
+        &::before{
+          color: $blue-color;
+        }
+      }
+    }
+}
+
+/* common classes css start */
+
+.link{
+  @include text-format(16px,$color-42);
+}
+.medium{
+  font-family: $medium;
+}
+.globalPadding{
+  padding: 50px 0 65px;
+}
+.margin-t-0{
+  margin-top: 0;
+}
+.margin-t-20{
+  margin-top: 20px;
+}
+.margin-b-20{
+  margin-bottom: 20px;
+}
+.orange{
+  color: $orange;
+}   
+.green{
+  color: $green;
+}
+.red{
+  color: $red;
+}
+.yellow{
+  color: $yellow-dark;
+}
+.blue{
+  color: $blue-color;
+}
+.darkgrey{
+  color: $color-42;
+}
+.row{
+  &.row-5{
+    margin-left: -5px;
+    margin-right: -5px;
+    [class*="col-"]{
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+  &.row-0{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+/* common classes css end */
+
+
+.radio-toggle{
+    label{
+        &.z_checked{
+            @include pos(r, null);
+            cursor: pointer;
+            span{
+                 width:50px;
+                  height:26px;
+                  background-color: $color-c7;
+                @include radius(20px);
+                display: inline-block;
+                @include padding-left(30);
+                @include pos(r, null);
+                &:before {
+                  @include pos(a, 1px auto auto 1px );
+                  @include circle;
+                  background-color:white;
+                  content: "";      
+                  @include square(24px);
+                  @include box-shadow(0px 0px 4px rgba(0,0,0,0.5));
+                }
+            }
+            input[type="checkbox"]{
+                @include pos(a, 0px auto auto 0px );
+                visibility: hidden;
+                &:checked{
+                    &+ span{
+                      background-color: $green;
+                        &:before {
+                            @include pos(a, 1px 2px auto auto);                           
+                        }
+                    }
+                }
+            }
+        }             
+    }
+}  
+
+.fromToBox{
+  text-align: right;
+  [class*="col-"]{
+    padding: 0;
+  }
+  .fromSec, .toSec{
+    width:40px;
+    @include display(middle);   
+    margin-left: 25px;
+    @media screen and (max-width:992px){
+      margin-left: 15px;
+    }
+    @media screen and (max-width:767px){
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  .toSec{
+    width: 25px;  
+    @media screen and (max-width:767px){
+      width: 100%;
+    } 
+  }
+  .minWidth-170{
+    max-width: 170px;
+    @include display(middle);
+      margin-left: 15px;
+    @media screen and (max-width:992px){
+      margin-left: 10px;
+    }
+     @media screen and (max-width:767px){
+      max-width: 100%;
+      width: 100%;
+      margin-left: 0px;
+    }
+    &.dropFilter{
+      min-width:170px;
+    }
+    &.min-width-110{
+      min-width: 110px;
+    }
+  }
+
+  label{
+    text-align: right;
+    width: 100%;
+    margin: 0;
+    @media screen and (max-width:767px){
+      text-align: left;
+    }
+  }
+}
+.filterBtn{
+  .btn{
+    @include pos(r, null);
+    background-color: #fdfdfd;
+    @include radius(0px);
+    @include text-format(16px,$color-80);
+    padding: 12px 20px 12px 20px;
+    border: 1px solid #ccc;
+    text-align: left;
+    min-width: 10px;
+    display: block;
+    @media screen and (max-width:1200px){
+      font-size: 14px;
+      padding: 8px 20px 8px 10px;
+    }
+    i{
+      font-size:12px;
+      margin-right: 10px;
+      @media screen and (max-width:1200px){
+        font-size: 10px;     
+      }
+    }
+    &:after {
+      @include pos(a, calc(50% - 7px) 15px auto auto);
+      content: "\e935";
+      font-family: 'icomoon' !important;
+      font-size: 12px;
+      color: $color-80;               
+    }    
+  }
+  .dropdown-menu{
+    width: 100%;
+    li {
+      a{
+        @include text-format(15px,$color-80);
+      }
+    }
+  }
+}
+
+
+.flex{
+  display: flex;
+  @media screen and (max-width:767px){
+    display: block;
+  }
+  &.noflex{
+    display: flex;
+  }
+}
+.errorMsg {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}

@@ -1,0 +1,51 @@
+.main-inner{
+	&.in-pagecontainer{
+		.paharmacyBookingPage{
+			.box-inner{
+				margin-bottom: 20px;
+				padding: 40px 30px;
+				background-color: #0d5ba6;
+				@media screen and (max-width:992px){
+					padding: 20px;
+					margin-bottom: 10px;
+				}
+				.icon{
+					@include text-format(85px,rgba(255,255,255,0.3));
+					@include display(middle);
+					margin-right: 40px;
+					@media screen and (max-width:992px){
+						font-size: 45px;
+						display: block;
+						margin-right: 0;
+						text-align: center;
+					}
+				}
+				.boxInfo{
+					text-align: center;
+					@include display(middle);
+					@media screen and (max-width:992px){
+						display: block;						
+					}
+					h3{
+						@include text-format(36px,white);
+						font-family: $medium;
+					}
+					h4{
+						@include text-format(16px,white);
+						font-family: $medium;
+						text-transform: uppercase;
+					}
+				}
+				&.green{
+					background-color: $green;
+				}
+				&.blue{
+					background-color: $blue-color;
+				}
+				&.orange{
+					background-color: $orange;
+				}
+			}
+		}
+	}
+}

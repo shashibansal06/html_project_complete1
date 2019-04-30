@@ -1,0 +1,45 @@
+.comingSoonPage{
+	header {
+	    position: fixed;
+	    @include box-shadow-none(); 
+	    background-color: $transparent-color;
+	}
+	.comingson{
+		@include pos(f, null);
+		background:{
+			color:$white-color;
+			image:url('../../assets/images/comingBg.jpg');
+			size:cover;
+			attachment:fixed;
+		} 
+		display: table;
+		@include height-width(100vh,100%);
+		.d-table-cell{
+			display: table-cell;
+			vertical-align: middle;
+			width: 100%;
+			padding: 20px;
+			img{
+				margin: 20px 0;
+				max-width: 100%;
+				@media screen and (max-width:992px){
+				 	margin: 10px 0;
+				}
+			}
+			.img1{
+				img{
+					  @media screen and (max-width:992px){
+					  	max-width: 60px;
+					  }
+				}
+			}
+			.img2{
+				img{
+					  @media screen and (max-width:992px){
+					  	max-width: 250px;
+					  }
+				}
+			}
+		}
+	}
+}

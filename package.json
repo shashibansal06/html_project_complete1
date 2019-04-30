@@ -1,0 +1,27 @@
+{
+  "name": "matchmyhouse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app/index.html",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "node-sass": "^4.7.2",
+    "npm-sass": "^2.2.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-sourcemaps-support": "^0.0.1",
+    "gulp-watch": "^4.3.11",
+    "gulp-webserver": "^0.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

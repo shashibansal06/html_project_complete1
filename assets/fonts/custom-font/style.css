@@ -1,0 +1,231 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?ibt8qo');
+  src:  url('fonts/icomoon.eot?ibt8qo#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ibt8qo') format('truetype'),
+    url('fonts/icomoon.woff?ibt8qo') format('woff'),
+    url('fonts/icomoon.svg?ibt8qo#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-videoPlay:before {
+  content: "\e942";
+  color: #fff;
+}
+.icon-checkDesign:before {
+  content: "\e941";
+}
+.icon-trash:before {
+  content: "\e940";
+}
+.icon-import:before {
+  content: "\e93f";
+}
+.icon-clocktime:before {
+  content: "\e93e";
+}
+.icon-interface:before {
+  content: "\e93d";
+}
+.icon-eye:before {
+  content: "\e93b";
+}
+.icon-eyewithline:before {
+  content: "\e93c";
+}
+.icon-boxcalendar:before {
+  content: "\e937";
+}
+.icon-boxclock:before {
+  content: "\e938";
+}
+.icon-boxtime:before {
+  content: "\e939";
+}
+.icon-boxtime1:before {
+  content: "\e93a";
+}
+.icon-tick:before {
+  content: "\e936";
+}
+.icon-angle-arrow-down:before {
+  content: "\e935";
+}
+.icon-social:before {
+  content: "\e934";
+}
+.icon-upload:before {
+  content: "\e932";
+  color: #ccc;
+}
+.icon-download:before {
+  content: "\e933";
+  color: #00aeef;
+}
+.icon-error:before {
+  content: "\e931";
+}
+.icon-addCircular:before {
+  content: "\e92f";
+}
+.icon-closeCircular:before {
+  content: "\e930";
+}
+.icon-minus-sign:before {
+  content: "\e92d";
+}
+.icon-plusSign:before {
+  content: "\e92e";
+}
+.icon-filterResult:before {
+  content: "\e92c";
+}
+.icon-caution-sign:before {
+  content: "\e92b";
+}
+.icon-pills:before {
+  content: "\e92a";
+}
+.icon-pdf:before {
+  content: "\e929";
+}
+.icon-information:before {
+  content: "\e917";
+}
+.icon-logout:before {
+  content: "\e918";
+}
+.icon-profile:before {
+  content: "\e919";
+}
+.icon-search:before {
+  content: "\e91a";
+}
+.icon-time:before {
+  content: "\e91b";
+}
+.icon-calendar:before {
+  content: "\e91c";
+}
+.icon-list:before {
+  content: "\e91d";
+}
+.icon-people:before {
+  content: "\e91e";
+}
+.icon-vaccination:before {
+  content: "\e91f";
+}
+.icon-travel_clinic:before {
+  content: "\e920";
+}
+.icon-Podiatry:before {
+  content: "\e921";
+}
+.icon-Mymur:before {
+  content: "\e922";
+}
+.icon-order_icon:before {
+  content: "\e923";
+}
+.icon-pencil:before {
+  content: "\e924";
+}
+.icon-science:before {
+  content: "\e925";
+}
+.icon-cigarette:before {
+  content: "\e926";
+}
+.icon-medicalicon:before {
+  content: "\e927";
+}
+.icon-medicalnn:before {
+  content: "\e928";
+}
+.icon-family:before {
+  content: "\e916";
+}
+.icon-web:before {
+  content: "\e915";
+}
+.icon-placeholder:before {
+  content: "\e914";
+}
+.icon-arrowtoright:before {
+  content: "\e900";
+}
+.icon-bell:before {
+  content: "\e901";
+}
+.icon-downarw:before {
+  content: "\e902";
+}
+.icon-facebook:before {
+  content: "\e903";
+}
+.icon-facebookcircular:before {
+  content: "\e904";
+}
+.icon-key:before {
+  content: "\e905";
+}
+.icon-linkedin:before {
+  content: "\e906";
+}
+.icon-linkedincircular:before {
+  content: "\e907";
+}
+.icon-location:before {
+  content: "\e908";
+}
+.icon-mail:before {
+  content: "\e909";
+}
+.icon-medical:before {
+  content: "\e90a";
+}
+.icon-minus:before {
+  content: "\e90b";
+}
+.icon-patient:before {
+  content: "\e90c";
+}
+.icon-plus:before {
+  content: "\e90d";
+}
+.icon-rightarw:before {
+  content: "\e90e";
+}
+.icon-sign:before {
+  content: "\e90f";
+}
+.icon-telephone:before {
+  content: "\e910";
+}
+.icon-twitter:before {
+  content: "\e911";
+}
+.icon-twittercircular:before {
+  content: "\e912";
+}
+.icon-wave:before {
+  content: "\e913";
+  color: #d7d7d7;
+}

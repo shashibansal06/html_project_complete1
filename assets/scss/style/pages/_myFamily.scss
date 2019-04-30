@@ -1,0 +1,116 @@
+.main-inner{
+	&.in-pagecontainer{
+		.addMemberSection{
+			.blankSection{
+				background-color: white;
+				padding: 90px 20px;
+				text-align: center;
+				margin-bottom: 50px;
+				@media screen and (max-width:992px){
+					padding: 40px 20px;										
+				}
+				p{
+					@include text-format(18px,$color-80);
+					@media screen and (max-width:992px){
+						font-size: 14px;
+					}
+				}
+			}
+			.greyBox{
+				background-color: $color-f5;
+				padding: 50px 30px;
+				margin-bottom: 25px;
+				@media screen and (max-width:992px){
+				   padding: 20px 10px;
+				}
+				h3{
+					@include text-format(18px,$color-42);
+					font-family:$medium;
+					margin: 0 0 15px 0;	
+					@media screen and (max-width:992px){
+						font-size:16px;
+					}				
+				}
+				p{
+					margin-bottom: 0;
+
+				}
+			}
+		}
+		.familyMemberList{
+			.listBoxInner{
+				margin-bottom: 20px;
+				@media screen and (max-width:992px){
+					margin-bottom: 10px;
+				}
+				a{
+					padding: 30px 40px;
+					display: block;
+					background-color: white;
+					@include pos(r, null);
+					@media screen and (max-width:992px){
+						padding: 20px 30px;
+					}
+					    &:after {
+					      @include pos(a, calc(50% - 8px) 15px auto auto);
+					      content: "\e900";
+					      font-family: 'icomoon' !important;
+					      font-size: 12px;
+					      color: $color-80;
+					      @media screen and (max-width:1200px){
+					        top: calc(50% - 6px);
+					        right: 10px;
+					        font-size: 10px;
+					      }               
+					    }
+					span{
+						@include circle();
+						@include square(89px);
+						@include display(middle);
+						overflow: hidden;
+						@media screen and (max-width:992px){
+							@include square(70px);
+						}
+						img{
+							min-height: 100%;
+							min-width: 100%;
+							width: 100%;
+							height: auto;
+						}
+					}
+					.info{
+						@include display(middle);
+						padding-left: 30px;
+						@media screen and (max-width:992px){
+							padding-left: 20px;
+						}
+						@media screen and (max-width:767px){
+							display: block;
+							padding-left: 0;
+							margin-top: 10px;
+						}
+						h2{
+							@include text-format(20px,$color-42);
+							font-family:$regular;
+							margin: 0 0 15px 0;
+							@media screen and (max-width:992px){
+								font-size:16px;
+							}
+							@media screen and (max-width:992px){
+								margin-bottom: 10px;
+							}
+						}
+						h3{
+							@include text-format(16px,$color-80);
+							font-family:$regular;
+							margin: 0;
+							@media screen and (max-width:992px){
+								font-size:14px;
+							}
+						}	
+					}
+				}		
+			}			
+		}		
+	}
+}
